@@ -1,4 +1,5 @@
 /**
+/**
 * @author    Ninodezign.com http://www.ninodezign.com
 * @copyright Copyright (C) 2016 Ninodezign.com. All rights reserved.
 * @license   Ninodezign.com Proprietary License
@@ -242,9 +243,8 @@ img.img-full-width {
 #nino-header {
 	position: relative;
 	font-family: 'Cabin', sans-serif;
-	background: url(../images/Bannerwebsite/Portal.png) no-repeat center center / cover;
-	max-width: 100%;
-	z-index:0;
+
+	/*background: url(../images/portalrm.jpg) no-repeat center center / cover;*/
 }
 #nino-header:after {
 	content: "";
@@ -263,7 +263,38 @@ img.img-full-width {
 	z-index: 5;
 }
 
+/* ============ Initial Animation =========== */
 
+#nino-Begining .row{
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+#nino-Begining .img{
+	opacity: 1;
+	display: block;
+    margin: auto;
+	with:50%;
+}
+#nino-Begining .bg{
+	background: url(../images/BannerWebsite/Portal.png) no-repeat center;
+}
+
+#nino-Begining .overlay{
+	background: rgba(0, 0, 0, 0);
+    text-align: center;
+    padding: 45px 0 66px 0;
+    opacity: 0;
+    -webkit-transition: opacity 0.25s ease;
+    -moz-transition: opacity 0.25s ease;
+}
+#nino-Begining .overlay:hover{
+  opacity: 1;
+}
+#nino-Begining .overlay .after{
+	background: url(../images/BannerWebsite/spaceship.png) no-repeat center;
+}
 /* =============== MAIN SLIDER =============== */
 #nino-slider {
 	padding: 40px 0 0;
@@ -327,14 +358,13 @@ img.img-full-width {
 }
 /* =============== LAYOUT - MENU AREA =============== */
 #nino-navbar {
-	background: black; /*url(../images/Bannerwebsite/Portal.png) no-repeat center center / cover;*/
-	background: transparent;
+	/*background: url(../images/nav.png) no-repeat center center / cover;*/
+	background: black;
 	border: none;
 	border-radius: 0;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	font-size: 14px;
-	z-index:2;
 }
 #nino-navbar .navbar-brand {
 	background: url(../images/banner/BESTLisbon.png) no-repeat center center / cover; /*logo_BEST_Lisbon_.png*/
@@ -388,7 +418,7 @@ img.img-full-width {
 	top: 0;
 	left: 0;
     width: 100%;
-	/*background: url(../images/nav.png)no-repeat center center / cover;*/
+/*background: url(../images/nav.png)no-repeat center center / cover;*/
     background: black;
     z-index: 2;
     -webkit-animation-duration: .5s;
@@ -521,14 +551,15 @@ section {
 }
 #nino-counting .text-signup {
 	color: #fff;
-	padding-bottom: 7%;
+	padding-bottom: 15%;
 	font-weight: bold;
 	font-size: 20px;
-	border: 4px solid #fff;
+	border: 4px solid #00ff00;
 }
 #nino-counting .text-signup:hover { 
-	color: #00ff00;
-	background: #fff;
+	color: #fff;
+	background: #FAA519;
+	border: 4px solid #000;
 }
 #nino-counting .item {
 	width: 20%;
@@ -909,14 +940,15 @@ color: #595959;
 	background: #EEA225;
 	padding: 10px;
 	margin: 0 -1px;
-	line-height: 100%;
-	z-index:1;
+	line-height: 100%
+	
 }
 #nino-ourTeam .content .nino-icon:hover {
 	color: #fff;
 	background: #fff;
 	border-radius: 50%;
-	z-index:1;
+
+	
 }
 #nino-ourTeam .info {
 	margin-top: 35px;
@@ -937,7 +969,6 @@ color: #595959;
 #nino-ourTeam .img{
 	border-radius:50%;
 }
-
 /* =============== SECTION JURY =============== */
 
 #nino-happyClient .item {
@@ -1004,7 +1035,7 @@ color: #595959;
 	color: #fff;
 }
 
-}
+
 /* =============== SECTION LATEST BLOG =============== */
 #nino-latestBlog article .articleThumb {
 	position: relative;
@@ -1135,7 +1166,6 @@ color: #595959;
 #nino-faq .panel {
   display: none;
 }
-
 /* =============== SECTION DOC1 =============== */
 #nino-doc {
 	padding: 25px 0;
@@ -1283,37 +1313,6 @@ color: #595959;
 
 .img-responsive-full { max-width: 100%; width: 100%; }
 .img-circle { -webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%; overflow:#FFF;  }
-
-/* =============== SECTION OUR TEAM =============== */
-#nino-ourTeam .content .nino-icon {
-	display: inline-block;
-	font-size: 25px;
-	color: #149045;
-	background: #2de1fc;
-	padding: 10px;
-	margin: 0 -1px;
-	line-height: 100%;
-	z-index:1;
-}
-#nino-ourTeam .content .nino-icon:hover {
-	color: #fff;
-	background: #fff;
-	z-index:3;
-}
-#nino-ourTeam .info {
-	margin-top: 35px;
-	text-align: center;
-}
-#nino-ourTeam .name {
-	font-size: 14px;
-	margin: 0 0 5px;
-}
-#nino-ourTeam .regency {
-	font-style: italic;
-}
-#nino-ourTeam .img{
-	border-radius:50%;
-}
 
 
 /* =============== LAYOUT - FOOTER AREA =============== */
@@ -1511,8 +1510,12 @@ div.pp_default .pp_social {
 	flex: 1;
 }
 #nino-Categories .toggle {
-    height:200px;
+    height:450px;
     line-height:48px;
+}
+#nino-Categories .toggle:hover{
+	opacity: 0.5;
+	border-radius: 75%;
 }
 #nino-Categories .toggle .imageTD {
     vertical-align:middle;
@@ -1520,16 +1523,8 @@ div.pp_default .pp_social {
     height:400px;
     width:400px;
 	border-radius:50%;
+	opacity:1;
     background:url(../images/planet1.jpg);
-}
-#nino-Categories .toggle .imageTD .overlay{
-	position: absolute;
-	  top: 0;
-	  left: 0;
-	  width: 100%;
-	  height: 100%;
-	  z-index: 10;
-	  background-color: rgba(0,0,0,0.5); /*dim the background*/
 }
 #nino-Categories .toggle .imageCS {
     vertical-align:middle;
@@ -1537,6 +1532,7 @@ div.pp_default .pp_social {
     height:400px;
     width:400px;
 	border-radius:50%;
+	opacity:1;
     background:url(../images/planet1.jpg);
 }
 
@@ -1791,7 +1787,7 @@ div.pp_default .pp_social {
 	
 	/* =============== MENU AREA =============== */
 	#nino-navbar {
-		background: black;/*url(../images/Bannerwebsite/Portal.png) no-repeat center center / cover;*/
+		/*background: url(../images/nav.png)no-repeat center center / cover;*/
 	}
 	#nino-navbar .navbar-header {
 		padding-right: 80px;
@@ -1812,7 +1808,7 @@ div.pp_default .pp_social {
 		/*background: rgba(56,56,56,0.95);
 		border-color: #464646;*/
 		position: absolute;
-		z-index: 2;
+		z-index: 1;
 		left: 0px;
 	}
 	#nino-navbar .nino-iconsGroup {

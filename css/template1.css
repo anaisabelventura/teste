@@ -97,7 +97,7 @@ header a, a:visited {
 .clouds{
     background:transparent url(http://www.script-tutorials.com/demos/360/images/clouds3.png) repeat top center;
     z-index:-1;
-	filter: hue-rotate(210deg) brightness(0.8) contrast(3); /*turns red clouds into blue*/
+	filter: hue-rotate(210deg) brightness(0.8) contrast(4); /*turns red clouds into blue*/
 	
   -moz-animation:move-clouds-back 200s linear infinite;
   -ms-animation:move-clouds-back 200s linear infinite;
